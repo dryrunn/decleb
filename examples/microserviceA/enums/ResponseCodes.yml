@@ -1,0 +1,18 @@
+kind : Enum
+version : v1
+metadata:
+  name : "ResponseCode"
+properties:
+  - name : code
+    type : String
+  - name : message
+    type : String 
+values:
+  - name : "SUCCESS"
+    code : "C0000101"
+    message : "SUCCESS"
+  - name : "FAILURE"
+    code : "C0000102"
+    message : "FAILURE"
+
+

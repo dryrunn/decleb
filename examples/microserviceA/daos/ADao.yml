@@ -1,0 +1,21 @@
+kind : Dao
+version : v1
+import : 
+  - "../entities/A"
+properties:
+  
+  methods:
+    - find:
+      - name : byId 
+        return: Single
+        args: 
+          - a1
+      - name : byA2
+        return : List
+        args:
+          - a2
+    - insert:
+    # can add support for various options like insert
+    #  
+    - update:
+    - delete:

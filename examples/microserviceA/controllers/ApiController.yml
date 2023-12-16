@@ -1,0 +1,34 @@
+kind : Controller
+version : v1
+import:
+  - pojo:
+    - "../entities/A"
+  - services:
+    - "../services/A"
+methods:
+  metadata:
+    name: "ApiController" 
+  methods:
+    - name : "queryBookDetailsById"
+      args:
+        - name : bookById
+          options:
+            required: true
+            maxLength : String
+      return:
+        src : "../response/GeneralResponse"
+        parameters: 
+          - {{ values.book }}
+
+    - name : "queryBookByBookName"
+      args:
+        - name : bookName 
+          options:
+            required: true
+            maxLength : String
+      return:
+        response: 
+          src : "../response/GeneralResponse"
+          parameters: 
+            - {{ values.book }}
+           

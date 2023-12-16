@@ -1,0 +1,21 @@
+kind : Entity
+version : v1
+extends: 
+  - ../pojos/A
+properties:
+  id: 
+    name : a1
+    generator: DBAutoGenerator
+    # may be a few generation options e.g. ZookeperGenerator , ../sequencer/CustomGenerator.yml etc 
+    # how to define complex keys and values generated at run time
+  index:
+    - name : a1
+      fields:
+        - a1 :
+          order : ASC
+          # Can Add support for short hand annotations with mostly default configs
+        - a2 :
+          order : DESC
+      options:
+        unique : true
+

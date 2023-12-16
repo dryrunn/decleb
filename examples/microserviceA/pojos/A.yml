@@ -1,0 +1,7 @@
+kind : POJO
+version : v1
+parameters :
+  - a1 :
+    type : String
+  - a2 :
+    type : Int

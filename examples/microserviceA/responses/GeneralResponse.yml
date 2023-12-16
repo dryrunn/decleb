@@ -1,0 +1,28 @@
+kind : Response
+version : v1
+import:
+  enum:
+    - "../enum"
+generics:
+  - T
+parameters :
+  - name: code 
+    type : "enums/ResponseCodes"
+  - name : message 
+    type : String
+  - name : body
+    type : T
+status :
+  - 200 :
+    code : SUCCESS
+    message : "Success" 
+    body : {{ result }}
+    # infer type from the specified path
+  - 404 :
+    code : {{ FAILURE.code }}
+    message : "Not Found Exception"
+    body : 
+  - 505 :
+    code : {{ FAILURE.code }}
+    message : {{ exception.message }}
+    body : 
